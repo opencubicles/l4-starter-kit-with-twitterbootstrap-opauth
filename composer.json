@@ -1,6 +1,10 @@
 {
 	"require": {
-		"laravel/framework": "4.0.*"
+		"laravel/framework": "4.0.*",
+                "opauth/opauth": "*",
+                "opauth/facebook": "*",
+                "opauth/google": "*",
+                "opauth/twitter": "*"
 	},
 	"autoload": {
 		"classmap": [

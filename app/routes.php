@@ -11,7 +11,15 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+
+
+Route::controller('account', 'AccountController');
+
+Route::get('social/auth/{network?}', 'SocialController@auth');
+Route::get('social/callback', 'SocialController@callback');
+
+Route::get('social/auth/{network?}/int_callback', 'SocialController@auth');
+Route::get('social/auth/{network?}/oauth2callback', 'SocialController@auth');
+Route::get('social/auth/{network?}/oauth_callback', 'SocialController@auth');
+
+Route::get('/', 'HomeController@showIndex');
