@@ -46,8 +46,8 @@
                <div class="controls">
                   <br />
                   <a href="/social/auth/facebook" class="btn"><img src="{{ asset('assets/img/social/facebook.png') }}" alt="Facebook"></a>&nbsp;&nbsp;&nbsp;
-                  <a href="/social/auth/twitter" class="btn"><img src="{{ asset('assets/img/social/twitter.png') }}" alt="Twitter"></a>&nbsp;&nbsp;&nbsp;
-                  <a href="/social/auth/google" class="btn"><img src="{{ asset('assets/img/social/google.png') }}" alt="Google"></a>
+              <!--    <a href="/social/auth/twitter" class="btn"><img src="{{ asset('assets/img/social/twitter.png') }}" alt="Twitter"></a>&nbsp;&nbsp;&nbsp; -->
+                  <a href="/social/auth/google" class="btn"><img src="{{ asset('assets/img/social/google.png') }}" alt="Google"></a> 
                </div>
 	</div>
 	<!-- ./ login button -->

@@ -18,7 +18,7 @@ class CreateAuthenticationsTable extends Migration {
                     $table->integer('user_id')->unsigned();
                     $table->foreign('user_id')->references('id')->on('users');
                     $table->string('provider');
-                    $table->integer('provider_uid')->unique(); 
+                    $table->string('provider_uid'); 
                     $table->timestamps();                    
 		});
 	}

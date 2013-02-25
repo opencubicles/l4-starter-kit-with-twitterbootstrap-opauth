@@ -39,6 +39,7 @@ class SocialController extends BaseController {
           if ($err_msg)
              return Redirect::to('account/login')->with('error', $err_msg);
           else {
+             $email = $response['auth']['info']['email'];
              $authentication = new Authentication;
              $authentication->provider = $response['auth']['provider'];
              $authentication->provider_uid = $response['auth']['uid'];
@@ -48,10 +49,14 @@ class SocialController extends BaseController {
              if (!$authentication_exist) {
                 if (Auth::check()) {
                    $user = Auth::user();
-                   $authentication->user_id = $user->id;                  
+                   $authentication->user_id = $user->id;
                 } else {
-                   $user = new User;
-                   $user->save();
+                   $user = User::where('email', '=', $email)->first();
+                   if (!$user) {
+                      $user = new User;
+                      $user->email = $email;
+                      $user->save();
+                   }
                    $authentication->user_id = $user->id;
                 }
                 $authentication->save();
@@ -59,8 +64,9 @@ class SocialController extends BaseController {
              else
                 $user = User::where('id', '=', $authentication_exist->user_id)->first();
 
+
              Auth::login($user);
-             
+
              return Redirect::to('/');
           }
        }
