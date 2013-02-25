@@ -231,6 +231,7 @@ class AccountController extends AuthorizedController
 		// Log the user out.
 		//
 		Auth::logout();
+                Session::forget('user_image');
 
 		// Redirect to the users page.
 		//

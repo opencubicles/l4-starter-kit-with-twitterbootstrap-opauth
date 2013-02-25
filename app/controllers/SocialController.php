@@ -66,6 +66,9 @@ class SocialController extends BaseController {
 
 
              Auth::login($user);
+             
+             Session::put('user_image', $response['auth']['info']['image']);
+             
 
              return Redirect::to('/');
           }

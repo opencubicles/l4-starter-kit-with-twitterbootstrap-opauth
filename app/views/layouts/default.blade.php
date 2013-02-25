@@ -42,6 +42,9 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('assets/ico/apple-touch-icon-72-precomposed.png') }}">
 		<link rel="apple-touch-icon-precomposed" href="{{ asset('assets/ico/apple-touch-icon-57-precomposed.png') }}">
 		<link rel="shortcut icon" href="{{ asset('assets/ico/favicon.png') }}">
+                <style>
+                   .navbar .user_image { max-height: 40px; overflow: visible; padding-top: 0;padding-bottom: 0; }
+                </style>
 	</head>
 
 	<body>
@@ -62,6 +65,9 @@
 
 						<ul class="nav pull-right">
 							@if (Auth::check())
+                                                        @if ( Session::has('user_image') )
+                                                        <li class="navbar-text"><img src="{{Session::get('user_image')}}" class="user_image" />&nbsp;&nbsp;&nbsp;</li>
+                                                        @endif
 							<li class="navbar-text">Logged in as {{ Auth::user()->username }}</li>
 							<li class="divider-vertical"></li>
 							<li {{ (Request::is('account') ? 'class="active"' : '') }}><a href="{{ URL::to('account') }}">Account</a></li>
