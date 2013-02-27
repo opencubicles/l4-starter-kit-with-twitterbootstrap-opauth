@@ -19,23 +19,27 @@ return array(
     
         'callback_transport' => 'session',
 
-	'security_salt' => 'LDFmiilYf8Fyw5W10rx4W1KsVrieQCnpBzzpdaddfggssssssssaaxzxxxxm',		
+         /**
+         * A random string used for signing of $auth response.
+         */
+    
+	'security_salt' => 'Enter Ramdom string here',		
 
 	'Strategy' => array(		
 		
 		'Facebook' => array(
-			'app_id' => '109557205895999',
-			'app_secret' => 'ea50cad9a55bb8f25fc373b02efcef08'                        
+			'app_id' => 'APP ID',
+			'app_secret' => 'APP Secret'                        
  		),
 		
 		'Google' => array(
-			'client_id' => '302757129046.apps.googleusercontent.com',
-			'client_secret' => 'GGJcIHhR5OH5hjn_G0LnsHJ8'
+			'client_id' => 'Your Client ID',
+			'client_secret' => 'Your Client Secret'
 		),
 		
 		'Twitter' => array(
-			'key' => 'pIL46LL8P6pxb1CgfcMXCw',
-			'secret' => 'biyMKhKsxU1LVL2qUV1L06Xk2LuijpHaNl1TiZUw0'
+			'key' => 'Your twitter Key',
+			'secret' => 'Your twitter Secret'
 		),
 				
 	)
