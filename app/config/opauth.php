@@ -15,7 +15,7 @@ return array(
         /**
          * Callback URL: redirected to after authentication, successful or otherwise
          */
-	'callback_url' => 'http://app.wordply.com/social/callback/',
+	'callback_url' => URL::to('social/callback'),
     
         'callback_transport' => 'session',
 
