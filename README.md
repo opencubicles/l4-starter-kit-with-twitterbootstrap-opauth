@@ -3,7 +3,7 @@ l4-starter-kit-with-twitterbootstrap-opauth
 
 Laravel 4 - Starter kit with Twitter Bootstrap (v 2.3.0) integration along with support of Social Authentication Provider like Facebook/Gmail/Twitter for Authentication using Opauth Composer Package.
 
-Fork of a repo by [brunogaspar](https://github.com/brunogaspar) that no longer exists.
+Fork of a repo by [andrew13](https://github.com/andrew13/Laravel-4-Bootstrap) 
 
 ###How to install
 
