@@ -7,11 +7,11 @@ Fork of a repo by [brunogaspar](https://github.com/brunogaspar) that no longer e
 
 ###How to install
 
-  git clone git://github.com/opencubicles/l4-starter-kit-with-twitterbootstrap-opauth.git laravel
-	cd laravel
+	git clone git://github.com/opencubicles/l4-starter-kit-with-twitterbootstrap-opauth.git laravel
+	cd laravelc
 	curl -s http://getcomposer.org/installer | php
 	php composer.phar install
-
+	
 Now that you have the Laravel 4 installed, you need to create a database for it and update the file ***app/config/database.php***
 
 -----
